@@ -142,6 +142,7 @@
   
   .main {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   .section {
@@ -267,6 +268,15 @@
   }
 
 /*==================== HOME ====================*/
+.profile__picture {
+  height: 200px;
+  width: 200px;
+  filter: brightness(80%);
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+}
+
 .home__img {
     position: absolute;
     top: 0;
@@ -288,6 +298,12 @@
     row-gap: 3rem;
   }
   
+  .home__info__container .button {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+  }
+
   .home__data-subtitle,
   .home__data-title,
   .home__social-link,
@@ -502,6 +518,20 @@
     grid-template-columns: max-content;
     justify-content: center;
   }
+
+  .nav {
+    z-index: 100;
+  }
+
+  .place {
+    z-index: 50;
+  }
+
+  .profile__picture {
+    top: 50%;
+    position: absolute;
+  }
+
   .experience__content {
     padding: 0;
   }
@@ -521,8 +551,19 @@
   }
 }
 
+@media screen and (min-width: 340px) and (max-width: 568px) {
+  .profile__picture {
+    top: 70%;
+  }
+}
+
 /* For medium devices */
 @media screen and (min-width: 568px) {
+  .profile__picture {
+    height: 250px;
+    width: 250px;
+  }
+
   .video__container {
     display: grid;
     grid-template-columns: .6fr;
@@ -538,6 +579,17 @@
 }
 
   @media screen and (min-width: 768px) {
+    .profile__picture {
+      position: absolute;
+      right: 5rem;
+      top: 40%;
+
+    }
+
+    .home__info__container {
+      width: 50%;
+    }
+
     body {
       margin: 0;
     }

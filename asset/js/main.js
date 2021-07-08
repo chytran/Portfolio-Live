@@ -33,6 +33,6 @@ navLink.forEach(n => n.addEventListener("click", linkAction))
 function scrollHeader() {
     const header = document.getElementById("header");
     // When scroll is greater than 100, add scroll-header class
-    if(this.scrollY >= 600) header.classList.add("scroll-header"); else header.classList.remove("scroll-header");
+    if(this.scrollY >= 800) header.classList.add("scroll-header"); else header.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader)
