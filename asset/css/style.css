@@ -370,6 +370,7 @@ input {
   left: 0;
   bottom: 0;
   cursor: pointer;
+  color: #FFF;
 }
 
 .source__link:hover {
